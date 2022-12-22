@@ -1,0 +1,99 @@
+{
+  "name": "cumulocity-device-at-risk-widget-plugin",
+  "version": "1.0.0-beta",
+  "description": "This is the Cumulocity module federation plugin. Plugins can be developed like any Cumulocity application, but can be used at runtime by other applications. Therefore, they export an Angular module which can then be imported by any other application. The exports are defined in `package.json`:",
+  "scripts": {
+    "start": "c8ycli server -u https://appbuilder-next.latest.stage.c8y.io",
+    "build": "c8ycli build",
+    "deploy": "c8ycli deploy",
+    "postinstall": "ngcc",
+    "prebuild": " gulp clean",
+    "postbuild": " gulp bundle"
+  },
+  "keywords": [],
+  "Author": "Darpankumar Lalani - Software AG, Global Presales",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@angular/animations": "14.0.6",
+    "@angular/common": "14.0.6",
+    "@angular/compiler": "14.0.6",
+    "@angular/core": "14.0.6",
+    "@angular/forms": "14.0.6",
+    "@angular/material": "14.0.6",
+    "@angular/platform-browser": "14.0.6",
+    "@angular/platform-browser-dynamic": "14.0.6",
+    "@angular/router": "14.0.6",
+    "@angular/upgrade": "14.0.6",
+    "@c8y/client": "1016.0.40",
+    "@c8y/ng1-modules": "1016.0.40",
+    "@c8y/ngx-components": "1016.0.40",
+    "@c8y/style": "1016.0.40",
+    "@ng-select/ng-select": "^9.0.1",
+    "@ngx-translate/core": "14.0.0",
+    "del": "^5.1.0",
+    "fs-extra": "^9.1.0",
+    "gulp": "^4.0.2",
+    "gulp-filter": "^6.0.0",
+    "gulp-inject-css": "^3.0.0",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-zip": "^5.0.1",
+    "i": "^0.3.6",
+    "ngx-bootstrap": "^9.0.0",
+    "rxjs": "~6.6.3",
+    "zone.js": "~0.11.7"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "14.0.6",
+    "@angular/cdk": "14.1.2",
+    "@angular-devkit/build-ng-packagr": "~0.803.28",
+    "@angular/compiler-cli": "14.0.6",
+    "@angular/language-service": "14.0.6",
+    "@angular/localize": "14.0.6",
+    "@angular/service-worker": "14.0.6",
+    "@types/jest": "^28.1.6",
+    "@types/webpack": "^5.28.0",
+    "file-loader": "^6.2.0",
+    "jest": "^28.1.3",
+    "jest-preset-angular": "^12.2.0",
+    "typescript": "4.7.4",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.0.1",
+    "del": "^6.1.1",
+    "style-loader": "3.3.1",
+    "html-loader": "4.1.0",
+    "@c8y/cli": "1016.0.40",
+    "ng-packagr": "^11.0.6"
+  },
+  "c8y": {
+    "application": {
+      "name": "Device At Risk Runtime Widget",
+      "description": "Custom widget with module federation",
+      "contextPath": "device-at-risk-runtime-widget",
+      "key": "device-at-risk-runtime-widget-application-key",
+      "globalTitle": "Cumulocity Device At Risk Widget with Module Federation",
+      "tabsHorizontal": true,
+      "isPackage": true,
+      "noAppSwitcher": true,
+      "package": "plugin",
+      "requiredPlatformVersion": ">=1016.0.0",
+      "exports": [
+        {
+          "name": "Device At Risk Runtime Widget",
+          "module": "GpDevicesAtRiskWidgetModule",
+          "path": "./widget/gp-devices-at-risk-widget.module.ts",
+          "description": "Devices at Risk Dashboard - Displays all the devices with risk levels in the dashboard"
+        }
+      ],
+      "remotes": {
+        "widget-plugin": [
+          "GpDevicesAtRiskWidgetModule"
+        ]
+      }
+    },
+    "cli": {}
+  },
+  "browserslist": [
+    "last 2 major versions"
+  ]
+}
