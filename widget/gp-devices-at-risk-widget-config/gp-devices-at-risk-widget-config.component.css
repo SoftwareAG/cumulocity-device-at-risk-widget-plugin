@@ -1,0 +1,7 @@
+.cdk-overlay-conatiner
+{
+    z-index: 1100 !important;
+}
+.cdk-overlay-container, .cdk-overlay-pane {
+    z-index: 9999 !important;
+}

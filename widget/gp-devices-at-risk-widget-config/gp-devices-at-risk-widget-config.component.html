@@ -1,0 +1,66 @@
+
+<div class="form-group">
+
+  <label>Table settings
+    <span title="Properties selected are displayed."><i class="fa fa-question-circle"></i></span>
+  </label>
+  <ng-container>
+    <label>Table Inputs </label>
+    <ng-container>
+      <ng-select [items]="propertiesToDisplay" [multiple]="true" bindLabel="name" bindValue="id" [closeOnSelect]="false"
+        [(ngModel)]="config.selectedInputs" (ngModelChange)="onColChange()" placeHolder='select Table Fields'>
+        <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+          <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected" /> {{item.name}}
+        </ng-template>
+      </ng-select>
+    </ng-container>
+    <div class="form-group">
+      <label translate>Default PageSize</label>
+      <input class="form-control" type="number" min="1" name="config.pageSize" style="width:50%"
+        [(ngModel)]="config.pageSize">
+    </div>
+    <div class="config-accordion" *ngIf="appId">
+      <button class="btn btn-default input-width" (click)="isExpandedDBS = !isExpandedDBS" type="button">
+        <div class="pull-left float-left">Dashboard Navigation Settings
+        </div>
+        <span class="float-right pull-right"><i *ngIf="isExpandedDBS" class="fa fa-caret-up"></i>
+          <i *ngIf="!isExpandedDBS" class="fa fa-caret-down"></i></span>
+      </button>
+      <div class="config-accordion" id="isExpandedDBS" *ngIf="isExpandedDBS">
+        <div class="row" *ngFor="let dashboard of config.dashboardList;let i = index">
+          <div class="col-sm-12" *ngIf="dashboard.type">
+            <div class="col-sm-3">
+              <ng-select [items]="deviceTypes" bindLabel="type" [closeOnSelect]="false" [searchable]="true"
+                placeholder="Select Device Type" appendTo="body" (change)="addNewRecord(i)" bindValue="type"
+                [(ngModel)]="dashboard.type">
+              </ng-select>
+            </div>
+            <div class="col-sm-3">
+              <input type="text" id="dashboarId{{i}}" class="form-control input-width" placeholder="Dashbaord ID"
+                [(ngModel)]="dashboard.dashboarId">
+            </div>
+            <div class="col-sm-3">
+              <div class="btn-group device-list-switch-toggle ">
+                <label class="c8y-switch ">
+                  <input type="checkbox" id="withTabGroup{{i}}" [checked]="dashboard.withTabGroup"
+                    [(ngModel)]="dashboard.withTabGroup">
+                  <span></span> DeviceId as TabGroup
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-3" *ngIf="!dashboard.withTabGroup">
+              <input type="text" id="tabGroupID{{i}}" class="form-control input-width"
+                placeholder="TabGroup ID(Optional)" [(ngModel)]="dashboard.tabGroupID">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="form-group">
+      <label title="DarkMode" class="c8y-checkbox" style="height: 60px;">
+        <input type="checkbox" value="false" [(ngModel)]="config.darkMode">
+        <span></span>
+        <span>Dark Mode</span>
+      </label>
+    </div> -->
