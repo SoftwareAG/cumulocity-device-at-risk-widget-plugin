@@ -41,8 +41,6 @@ export class GpDevicesAtRiskWidgetConfigComponent implements OnInit, DoCheck {
   constructor(private deviceListService: GpDevicesAtRiskWidgetService) { }
   @Input() config: any = {};
   ngOnInit() {
-  //  this.propertiesToDisplay = ['id', 'name', 'alarms', 'externalid', 'firmware', 'availability'];
-
     this.propertiesToDisplay = [
       { id: 'id', name: 'ID' },
       { id: 'name', name: 'Device Name' },
@@ -58,10 +56,6 @@ export class GpDevicesAtRiskWidgetConfigComponent implements OnInit, DoCheck {
       this.dashboardList.push(dashboardObj);
       this.config.dashboardList = this.dashboardList;
     }
-    // this.getAllDevices();
-    // if (!this.config.device) {
-    //     this.config.device = {};
-    //   }
     if (!this.config.device) {
       this.config.device = {};
     } else {

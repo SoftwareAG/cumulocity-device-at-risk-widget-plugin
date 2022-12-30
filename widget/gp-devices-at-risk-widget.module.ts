@@ -20,7 +20,6 @@ import {CoreModule, HOOK_COMPONENTS} from '@c8y/ngx-components';
 import { GpDevicesAtRiskWidgetComponent } from './gp-devices-at-risk-widget.component';
 import { MatTableModule } from '@angular/material/table';
 import { GpDevicesAtRiskWidgetConfigComponent } from './gp-devices-at-risk-widget-config/gp-devices-at-risk-widget-config.component';
-import { GpDevicesAtRiskWidgetService } from './gp-devices-at-risk-widget.service';
 import * as preview from './preview-image';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgSelectModule} from '@ng-select/ng-select';
@@ -40,7 +39,6 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
   exports: [GpDevicesAtRiskWidgetComponent, GpDevicesAtRiskWidgetConfigComponent, GpAlertModalComponent],
   entryComponents: [GpDevicesAtRiskWidgetComponent, GpDevicesAtRiskWidgetConfigComponent, GpAlertModalComponent],
   providers: [
-    GpDevicesAtRiskWidgetService,
     {
     provide: HOOK_COMPONENTS,
     multi: true,
