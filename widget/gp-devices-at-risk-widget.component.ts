@@ -40,11 +40,11 @@ export class GpDevicesAtRiskWidgetComponent implements OnInit, OnDestroy {
   configDashboardList = [];
   realTimeDeviceSub: object;
   appId = '';
-  @Input() config: { 
-    device: { id: IdReference; }; 
-    pageSize: any; 
-    dashboardList: any; 
-    selectedInputs: any; 
+  @Input() config: {
+    device: { id: IdReference; };
+    pageSize: any;
+    dashboardList: any;
+    selectedInputs: any;
     withTabGroup: boolean;
   };
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -54,7 +54,7 @@ export class GpDevicesAtRiskWidgetComponent implements OnInit, OnDestroy {
     private router: Router,
     private realtimeService: Realtime,
     private modalService: BsModalService) { }
-  
+
   toggle() {
     this.realtimeState = !this.realtimeState;
     if (this.realtimeState) {
@@ -250,7 +250,7 @@ export class GpDevicesAtRiskWidgetComponent implements OnInit, OnDestroy {
 
   private openDialogManual(message) {
     this.modalService.show(GpAlertModalComponent, { class: 'modal-lg', initialState: { message } });
-   }
+  }
 
   pageChanged(pageEvent: any) {
     this.currentPage = pageEvent.page;

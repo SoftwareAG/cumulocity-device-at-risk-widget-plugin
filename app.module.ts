@@ -12,20 +12,21 @@ import {
   Client,
   IdentityService,
   AlarmService,
-  IUser} from '@c8y/client';
+  IUser
+} from '@c8y/client';
 
 import { NgSelectModule } from '@ng-select/ng-select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { BootstrapComponent, CoreModule} from '@c8y/ngx-components';
+import { BootstrapComponent, CoreModule } from '@c8y/ngx-components';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 const auth = new BasicAuth({
-  user:'',
-  password:'',
-  tenant:''
+  user: '',
+  password: '',
+  tenant: ''
 
 });
-const client = new Client(auth,'');
+const client = new Client(auth, '');
 client.setAuth(auth);
 const fetchClient = client.core;
 @Injectable()
@@ -45,20 +46,20 @@ export class MockAppStateService {
   ],
   providers: [
     BsModalRef,
-      {
-        provide: IdentityService,
-        useFactory: () => {
-          return new IdentityService(fetchClient);
-        }
-      },
-        { provide: InventoryService, useValue: client.inventory},
-        { provide: Realtime, useValue: client.realtime},
-        { provide: AlarmService, useValue: client.alarm },
-        { provide: InventoryService, useValue: client.inventory },
-        { provide: Realtime, useValue: client.realtime },
-        { provide: IdentityService, useValue: client.identity },
-        { provide: AppStateService, useClass: MockAppStateService },
+    {
+      provide: IdentityService,
+      useFactory: () => {
+        return new IdentityService(fetchClient);
+      }
+    },
+    { provide: InventoryService, useValue: client.inventory },
+    { provide: Realtime, useValue: client.realtime },
+    { provide: AlarmService, useValue: client.alarm },
+    { provide: InventoryService, useValue: client.inventory },
+    { provide: Realtime, useValue: client.realtime },
+    { provide: IdentityService, useValue: client.identity },
+    { provide: AppStateService, useClass: MockAppStateService },
   ],
   bootstrap: [BootstrapComponent]
 })
-export class AppModule {}
+export class AppModule { }

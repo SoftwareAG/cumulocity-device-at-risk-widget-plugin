@@ -1,7 +1,7 @@
 {
   "name": "cumulocity-device-at-risk-widget-plugin",
   "version": "1.0.0-beta",
-  "description": "This is the Cumulocity module federation plugin. This plugin is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
+  "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
   "scripts": {
     "start": "c8ycli server --env.beta=true",
     "build": "c8ycli build --env.mode=production",
@@ -59,10 +59,10 @@
   "c8y": {
     "application": {
       "name": "Device At Risk Runtime Widget Plugin",
-      "description": "Cumulocity Device At Risk Runtime Widget Plugin with module federation",
+      "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
       "contextPath": "device-at-risk-runtime-widget",
       "key": "device-at-risk-runtime-widget-application-key",
-      "globalTitle": "Cumulocity Device At Risk Widget Plugin with Module Federation",
+      "globalTitle": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
       "tabsHorizontal": true,
       "isPackage": true,
       "noAppSwitcher": true,
@@ -73,7 +73,7 @@
           "name": "Device At Risk Runtime Widget Plugin",
           "module": "GpDevicesAtRiskWidgetModule",
           "path": "./widget/gp-devices-at-risk-widget.module.ts",
-          "description": "Devices at Risk Dashboard - Displays all the devices with risk levels in the dashboard"
+          "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it."
         }
       ],
       "remotes": {

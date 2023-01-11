@@ -26,6 +26,6 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 // tslint:disable-next-line: component-class-suffix
 export class GpAlertModalComponent {
     message: any;
-    constructor(public bsModalRef: BsModalRef) {}
-    dismiss() { this.bsModalRef.hide();}
+    constructor(public bsModalRef: BsModalRef) { }
+    dismiss() { this.bsModalRef.hide(); }
 }

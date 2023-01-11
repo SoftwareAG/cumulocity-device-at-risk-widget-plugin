@@ -26,9 +26,9 @@ describe('GpDevicesAtRiskWidgetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GpDevicesAtRiskWidgetComponent ]
+      declarations: [GpDevicesAtRiskWidgetComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -20,7 +20,7 @@ import { Injectable } from '@angular/core';
 import { IdentityService, IManagedObject, IResultList, Severity, IAlarm } from '@c8y/client';
 import { InventoryService, AlarmService, Realtime } from '@c8y/ngx-components/api';
 
-@Injectable({providedIn:'root'})
+@Injectable({ providedIn: 'root' })
 export class GpDevicesAtRiskWidgetService {
 
   constructor(public inventory: InventoryService,

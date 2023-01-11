@@ -34,7 +34,7 @@ th.mat-sort-header-sorted {
     width: 100px;
     padding-right: 10px;
     white-space: normal;
-    border-bottom-color: var(--table-border,var(--component-border,var(--root-component-border,rgba(0,0,0,0.1))));
+    border-bottom-color: var(--table-border, var(--component-border, var(--root-component-border, rgba(0, 0, 0, 0.1))));
 
 }
 
