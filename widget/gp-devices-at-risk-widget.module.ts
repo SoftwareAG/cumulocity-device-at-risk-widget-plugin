@@ -48,7 +48,17 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
         label: 'Devices At Risk',
         description: 'The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.',
         component: GpDevicesAtRiskWidgetComponent,
-        configComponent: GpDevicesAtRiskWidgetConfigComponent
+        configComponent: GpDevicesAtRiskWidgetConfigComponent,
+        data: {
+          ng1: {
+            options: {
+              noDeviceTarget: false,
+              noNewWidgets: false,
+              deviceTargetNotRequired: false,
+              groupsSelectable: true
+            }
+          }
+        }
       }
     }],
 })
