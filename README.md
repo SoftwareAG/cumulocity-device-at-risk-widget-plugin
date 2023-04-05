@@ -1,15 +1,13 @@
-# Cumulocity Devices at Risk Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-device-at-risk-widget-plugin/releases/download/1.0.0-beta/device-at-risk-runtime-widget-1.0.0-beta.zip)
+# Cumulocity Devices at Risk Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-device-at-risk-widget-plugin/releases/download/1.0.0/sag-ps-pkg-device-at-risk-runtime-widget-1.0.0.zip)
 
 This Cumulocity Devices at Risk Widget is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit. This plugin is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.
 One can also see the Availability of those devices and can also view the data both in Real-time/offline mode.
-
-### Please note that this plugin is in currently under BETA mode.
 
 ### Please choose Cumulocity Devices at Risk Widget Plugin release based on Cumulocity/Application builder version:
 
 |APPLICATION BUILDER | CUMULOCITY | DEVICE AT RISK WIDGET PLUGIN |
 |--------------------|------------|------------------------------|
-| 2.x.x(coming soon) | >= 1016.x.x| 1.x.x                        |
+| 2.x.x                | >= 1016.x.x| 1.x.x                        |
 
 ## Features
  - Displays Assets/Devices for given group in grid mode.
@@ -24,7 +22,7 @@ One can also see the Availability of those devices and can also view the data bo
   
 ### Runtime Widget Deployment?
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-device-at-risk-widget-plugin/releases/download/1.0.0-beta/device-at-risk-runtime-widget-1.0.0-beta.zip) and install via Administrations(Beta mode) --> Ecosystems --> Applications --> Packages 
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-device-at-risk-widget-plugin/releases/download/1.0.0/sag-ps-pkg-device-at-risk-runtime-widget-1.0.0.zip) and install via Administrations --> Ecosystems --> Applications --> Packages 
 
 ## QuickStart
 

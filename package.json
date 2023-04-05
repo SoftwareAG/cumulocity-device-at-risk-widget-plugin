@@ -1,16 +1,20 @@
 {
   "name": "cumulocity-device-at-risk-widget-plugin",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
   "scripts": {
-    "start": "c8ycli server --env.beta=true",
+    "start": "c8ycli server",
     "build": "c8ycli build --env.mode=production",
     "deploy": "c8ycli deploy",
     "postinstall": "ngcc",
     "prebuild": " gulp clean",
     "postbuild": " gulp bundle"
   },
-  "keywords": [],
+  "keywords": [
+    "Cumulocity",
+    "Plugin",
+    "Widget"
+  ],
   "Author": "Darpankumar Lalani - Software AG, Global Presales",
   "license": "Apache-2.0",
   "dependencies": {
@@ -58,10 +62,10 @@
   },
   "c8y": {
     "application": {
-      "name": "Device At Risk Runtime Widget Plugin",
+      "name": "Device At Risk",
       "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
-      "contextPath": "device-at-risk-runtime-widget",
-      "key": "device-at-risk-runtime-widget-application-key",
+      "contextPath": "sag-ps-pkg-device-at-risk-runtime-widget",
+      "key": "sag-ps-pkg-device-at-risk-runtime-widget-application-key",
       "globalTitle": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
       "tabsHorizontal": true,
       "isPackage": true,
@@ -70,7 +74,7 @@
       "requiredPlatformVersion": ">=1016.0.0",
       "exports": [
         {
-          "name": "Device At Risk Runtime Widget Plugin",
+          "name": "Device At Risk Runtime Widget ",
           "module": "GpDevicesAtRiskWidgetModule",
           "path": "./widget/gp-devices-at-risk-widget.module.ts",
           "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it."
