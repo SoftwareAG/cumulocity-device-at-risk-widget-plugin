@@ -5,7 +5,7 @@ One can also see the Availability of those devices and can also view the data bo
 
 ### Please choose Cumulocity Devices at Risk Widget Plugin release based on Cumulocity/Application builder version:
 
-|APPLICATION BUILDER | CUMULOCITY | DEVICE AT RISK WIDGET PLUGIN |
+|APPLICATION BUILDER &nbsp; | &nbsp; CUMULOCITY &nbsp; |&nbsp;  DEVICE AT RISK WIDGET PLUGIN &nbsp; |
 |--------------------|------------|------------------------------|
 | 2.x.x                | >= 1016.x.x| 1.x.x                        |
 
