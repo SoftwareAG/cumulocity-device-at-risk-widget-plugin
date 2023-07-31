@@ -84,7 +84,13 @@
         "widget-plugin": [
           "GpDevicesAtRiskWidgetModule"
         ]
-      }
+      },
+"copy":[
+  {
+    "from": "LICENSE",
+    "to": "LICENSE.txt"
+  }
+]
     },
     "cli": {}
   },
