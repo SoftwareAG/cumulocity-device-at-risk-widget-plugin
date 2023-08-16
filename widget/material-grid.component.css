@@ -65,3 +65,6 @@ table a:hover {
 .btnTheme {
     color: var(--component-color, #000);
 }
+:host ::ng-deep .page-link{
+    height:  32px;
+  }
