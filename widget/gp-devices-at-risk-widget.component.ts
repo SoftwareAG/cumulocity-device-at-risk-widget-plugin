@@ -227,7 +227,7 @@ export class GpDevicesAtRiskWidgetComponent implements OnInit, OnDestroy {
   // Navigate URL to dashboard if dashboard is exist else it will redirect to dialog box to create new Dasboard
   selectedRecord(id: any, deviceType: string) {
     if (deviceType && this.appId) {
-      const dashboardObj = this.configDashboardList.find((dashboard) => dashboard.type === deviceType);
+      const dashboardObj = this.configDashboardList.find((dashboard) => dashboard.type === deviceType || dashboard.type === 'All');
       if (dashboardObj && dashboardObj.dashboarId) {
 
         if (dashboardObj.withTabGroup) {
