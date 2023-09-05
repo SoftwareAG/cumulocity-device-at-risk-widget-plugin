@@ -55,11 +55,11 @@ th.mat-sort-header-sorted {
 }
 
 table a {
-    color: var(--component-link-color, var(--link-color, var(--brand-primary, #1776bf)));
+    color: var(--component-link-color, var(--link-color, var(--component-color, #000)));
 }
 
 table a:hover {
-    color: var(--component-link-color-hover, var(--link-color-hover, var(--brand-primary, #1776bf)));
+    color: var(--component-link-color-hover, var(--link-color-hover, var(--component-color, #000)));
 }
 
 .btnTheme {
