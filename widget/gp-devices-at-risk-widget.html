@@ -13,7 +13,8 @@
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Id. </th>
-      <td mat-cell *matCellDef="let element" style="cursor: pointer;"><a><span title="{{element.id}}"
+    
+<td mat-cell *matCellDef="let element" style="cursor: pointer; text-decoration: underline;"><a><span title="{{element.id}}"
             (click)="selectedRecord(element.id,element.type)"> {{element.id}} </span></a></td>
     </ng-container>
     <!-- Name Column -->

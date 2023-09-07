@@ -5,9 +5,13 @@ One can also see the Availability of those devices and can also view the data bo
 
 ### Please choose Cumulocity Devices at Risk Widget Plugin release based on Cumulocity/Application builder version:
 
-|APPLICATION BUILDER &nbsp; | &nbsp; CUMULOCITY &nbsp; |&nbsp;  DEVICE AT RISK WIDGET PLUGIN &nbsp; |
-|--------------------|------------|------------------------------|
-| 2.x.x                | >= 1016.x.x| 1.x.x                        |
+
+|APPLICATION BUILDER &nbsp; | &nbsp; CUMULOCITY &nbsp; |&nbsp; DEVICE AT RISK WIDGET PLUGIN &nbsp; |
+|--------------------|----------------------|------------------------------|
+| 2.0.x              | >= 1016.x.x | 1.x.x                  | 
+
+
+![Device-at-risk](image/deviceatrisk.PNG)
 
 ## Features
  - Displays Assets/Devices for given group in grid mode.

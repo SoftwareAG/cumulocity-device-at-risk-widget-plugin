@@ -1,6 +1,6 @@
 {
   "name": "cumulocity-device-at-risk-widget-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Device At Risk Widget is designed to get a list of devices based on a group selection and display any device that has a Critical/Major Alarm or Medium/High-Risk Firmware raised against it.",
   "scripts": {
     "start": "c8ycli server",
@@ -86,6 +86,10 @@
         ]
       },
 "copy":[
+  {
+    "from": "image/deviceatrisk.PNG",
+    "to": "image/deviceatrisk.PNG"
+  },
   {
     "from": "LICENSE",
     "to": "LICENSE.txt"
